@@ -1,0 +1,66 @@
+// images
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Remove underscores from styles
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//   pointer for button
+.button {
+  cursor: pointer;
+}
+
+// main container
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+
+//   section padding
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}

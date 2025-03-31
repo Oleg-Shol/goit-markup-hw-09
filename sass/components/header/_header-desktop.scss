@@ -1,0 +1,27 @@
+.header-desktop {
+  @media screen and (max-width: $tablet-1) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    display: block;
+  }
+}
+
+//   padding for header
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+//   margin for mail in header
+.header-desktop .mail {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    margin-bottom: 10px;
+  }
+}

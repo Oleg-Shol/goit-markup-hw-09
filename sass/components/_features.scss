@@ -1,0 +1,64 @@
+.features {
+  padding-top: 60px; // Общий padding для мобильной и планшетной версии
+  padding-bottom: 60px; // Общий padding для мобильной и планшетной версии
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px; // Увеличенный padding для десктопной версии
+    padding-bottom: 94px; // Увеличенный padding для десктопной версии
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  li-item:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  .li-item {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 30px; // Возвращаем margin-bottom для мобильных устройств
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 354px; // Ширина элемента на планшетах
+
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px; // Ширина элемента на десктопах
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      margin-bottom: 30px;
+      height: 120px;
+     
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f5f4fa;
+    }
+  }
+}
+
+$icons: 'antena', 'clock', 'diagram', 'astronaut';
+@include generateIcons($icons);

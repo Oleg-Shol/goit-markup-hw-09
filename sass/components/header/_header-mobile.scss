@@ -1,0 +1,48 @@
+.head-line {
+  border-bottom: 1px solid #ececec;
+}
+
+// header-mobile
+// 
+
+.header-mobile {
+  @media screen and (max-width: $tablet-1) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menu-button,
+.mobile-button-pct {
+  @media screen and (max-width: $tablet) {
+    width: 24px;
+    height: 16px;
+  }
+}
+
+
+.menu-button {
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  background-color: $second-color;
+  border: none;
+
+  .mobile-button-pct {
+    @media screen and (max-width: $tablet) {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      @include transition(fill);
+
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+      }
+    }
+  }
+}

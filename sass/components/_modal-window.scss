@@ -1,0 +1,222 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    z-index: 99;
+    @include transition(opacity, 350ms);
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+
+        .modal {
+            transform: translate(-50%, -50%) scale(0.1);
+          }
+      }
+  }
+
+
+//   modal window 
+  .modal {
+    position: relative;
+    
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  
+    padding: 40px;
+  
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: $desktop-1) {
+      margin-top: 93px;
+      max-width: 450px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 528px;
+      height: 600px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    
+        .close-x {
+          width: 11px;
+          height: 11px;
+          fill: #000000;
+          transition: fill 350ms cubic-bezier(0.4, 0, 0.2, 1);
+          background-position: center;
+        }
+        &:hover .close-x,
+        &:focus .close-x {
+          fill: #2196f3;
+        }
+  }
+
+//   text 
+  .modal-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-align: center;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+}
+
+.label-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
+
+// input
+
+  .input-position {
+    position: relative;
+  
+    .input-box {
+      width: 100%;
+      height: 48px;
+      padding-left: 42.5px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      outline: none;
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      @media screen and (min-width: $desktop) {
+        width: 448px;
+      }
+  
+      &:focus + .field {
+        fill: #2196f3;
+      }
+
+      &:focus {
+        border-color: #2196f3;
+      }
+    }
+  
+    .field {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  
+  .txtarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $desktop) {
+      width: 448px;
+    }
+
+    &:focus {
+      border-color: #2196f3;
+    }
+  }
+
+  .acception {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $desktop-1) {
+      font-size: 11.9px;
+      line-height: 1.17;
+    }
+  }
+
+  .act-lbl {
+    display: flex;
+    align-items: center;
+  }
+
+  .modal-btn {
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background: rgb(24, 140, 232);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;
+
+    @media screen and (max-width: $desktop-1) {
+      font-size: 11.9px;
+      line-height: 1.17;
+    }
+  }
+
+  .fill-in {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .chk-box {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .chk-icon {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 9px;
+  }
+
+  .chk-box:checked + .chk-icon {
+    background-color: #2196f3;
+    border-color: #2196f3;
+    background-image: url(../../Images/svg-icons/check1.svg);
+    background-origin: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .hyperlink {
+    margin-left: 5px;
+  }

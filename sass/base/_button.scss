@@ -1,0 +1,20 @@
+// base style for button
+
+.button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  margin-top: 30px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  border: none;
+
+  background-color: $hover-color;
+  color: $second-color;
+}

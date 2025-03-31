@@ -1,0 +1,56 @@
+.contacts-nav {
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    margin-left: 84px;
+  }
+
+  li:not(:first-child) {
+    @media screen and (min-width: $desktop) {
+      margin-left: 50px;
+    }
+  }
+
+  .link {
+    color: $main-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+
+    .contacts-icon {
+      width: 16px;
+      height: 16px;
+      fill: #757575;
+      margin-right: 10px;
+
+      
+    @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+
+      @include transition(color);
+    }
+    &:hover .contacts-icon,
+    &:focus .contacts-icon {
+      fill: $hover-color;
+    }
+  }
+}
+
+.contacts-nav.flex {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    display: block;
+    justify-content: flex-start;
+  }
+}
