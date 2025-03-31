@@ -19,39 +19,61 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
-      <div class="header container flex">
-        <!-- Navigations -->
-        <nav class="flex">
-          <a href="/" class="header-logo link"><span class="logo-blue">Web</span>Studio</a>
-          <ul class="menu-nav list flex">
-            <li><a href="./index.html" class="link" target="_blank">Studio</a></li>
-            <li><a href="" class="link current">Portfolio</a></li>
-            <li><a href="" class="link">Contacts</a></li>
-          </ul>
-        </nav>
-        svg
-        <!-- Contacts -->
-        <ul class="contacts-nav list flex">
-          <li>
-            <a href="mailto:info@devstudio.com" class="link flex">
-              <svg class="contacts-icon">
-                <use href="./Images/svg-icons/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
+    <header class="head-line">
+      <nav class="header header-mobile container">
+        <a class="header-logo link" href="./index.html" lang="en"
+          ><span class="logo-blue">Web</span>Studio</a
+        >
 
-          <li>
-            <a href="tel:+380961111111" class="link flex">
-              <svg class="contacts-icon">
-                <use href="./Images/svg-icons/symbol-defs.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
-      </div>
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="mobile-button-pct">
+            <use
+              class="mobile-lines"
+              href="./Images/svg-icons/symbol-defs.svg#icon-menu-lines"
+            ></use>
+            <!-- <use class="mobile-cross" href="./images/svg-icons/sprite.svg#menu_cross"></use> -->
+          </svg>
+        </button>
+      </nav>
+
+      <!-- desktop-header -->
+      <dev class="header-desktop container">
+        <div class="header flex">
+          <!-- Navigations -->
+
+          <nav class="flex">
+            <a href="/" class="header-logo link"><span class="logo-blue">Web</span>Studio</a>
+            <ul class="menu-nav list flex">
+              <li class="item"><a href="" class="link ">Studio</a></li>
+              <li class="item">
+                <a href="./portfolio.html" class="link current" target="_blank">Portfolio</a>
+              </li>
+              <li class="item"><a href="" class="link">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contacts -->
+          <ul class="contacts-nav list flex">
+            <li class="mail">
+              <a href="mailto:info@devstudio.com" class="link flex">
+                <svg class="contacts-icon">
+                  <use href="./Images/svg-icons/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+
+            <li>
+              <a href="tel:+380961111111" class="link flex">
+                <svg class="contacts-icon">
+                  <use href="./Images/svg-icons/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
+      </dev>
     </header>
     <main>
       <div class="section">
@@ -253,9 +275,11 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-wrap">
+        <div class="tablet-wrap">
         <div class="footer-contact">
           <a href="/" class="footer-logo link"><span class="logo-blue">Web</span>Studio</a>
+          <address class="footer-address">
           <ul class="list">
             <li class="footer-list">
               <a
@@ -265,20 +289,21 @@
               >
             </li>
             <li class="footer-list">
-              <a href="mailto:info@devstudio.com" class="link contact">info@devstudio.com</a>
+              <a href="mailto:info@devstudio.com" class="link contact footer-mail">info@devstudio.com</a>
             </li>
             <li class="footer-list">
               <a href="tel:+380961111111" class="link contact">+38 096 111 11 11</a>
             </li>
           </ul>
+        </address>
         </div>
 
         <div class="join">
           <p class="join-tittle">JOIN US</p>
-          <ul class="list flex">
-            <li class="join-list">
+          <ul class="list join-list">
+            <li>
               <a href="">
-                <button class="button">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-instagram"></use>
                   </svg>
@@ -287,7 +312,7 @@
             </li>
             <li>
               <a href="">
-                <button class="button">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-twitter"></use>
                   </svg>
@@ -296,7 +321,7 @@
             </li>
             <li>
               <a href="">
-                <button class="button">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-facebook"></use>
                   </svg>
@@ -305,7 +330,7 @@
             </li>
             <li>
               <a href="">
-                <button class="button">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-linkedin"></use>
                   </svg>
@@ -313,6 +338,21 @@
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+
+        <div class="submit">
+          <p class="subbmit-title">Subscribe to the newsletter</p>
+          <form class="submit-wrap">
+            <input type="email" name="email" placeholder="E-mail" class="submit-input" />
+
+            <button type="submit" class="button sub-button">
+              Subscribe
+              <svg class="send-btn" width="24px" height="24px">
+                <use href="./Images/svg-icons/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
